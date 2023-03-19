@@ -1,0 +1,153 @@
+@import "../../style.scss";
+
+.rightbar {
+     @include themify($themes) {
+          flex: 3;
+          background-color: themed("bgSoft");
+          position: sticky;
+          top: 70px;
+          height: calc(100vh - 70px);
+          padding: 20px;
+
+          ::-webkit-scrollbar {
+               display: none;
+          }
+
+          @include mobile {
+               display: none;
+          }
+
+          img {
+               height: 30px;
+               width: 30px;
+               border-radius: 50%;
+          }
+
+          p {
+               color: themed("textColor");
+               font-size: 12px;
+
+          }
+
+          span {
+               color: themed("textColorSoft");
+               font-weight: 100;
+
+          }
+
+          .container {
+               display: flex;
+               flex-direction: column;
+               gap: 30px;
+
+               .suggest {
+                    display: flex;
+                    flex-direction: column;
+                    height: 200px;
+                    background-color: themed("bg");
+                    padding: 20px 15px;
+                    -webkit-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+                    -moz-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+                    box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+                    overflow: scroll;
+
+                    .item {
+                         display: flex;
+                         justify-content: space-between;
+                         width: 100%;
+                         height: 50px;
+                         align-items: center;
+                         margin-top: 20px;
+
+                         .left {
+                              display: flex;
+                              justify-content: center;
+                              gap: 20px;
+                              align-items: center;
+                         }
+
+                         .right {
+                              display: flex;
+                              gap: 10px;
+
+                              button {
+                                   border: none;
+                                   color: white;
+                                   height: 30px;
+                                   width: 60px;
+                                   cursor: pointer;
+
+                                   &:first-child {
+                                        background-color: #5271ff;
+                                   }
+
+                                   &:last-child {
+                                        background-color: #f0544f;
+                                        ;
+                                   }
+                              }
+                         }
+                    }
+               }
+
+               .activity {
+                    display: flex;
+                    flex-direction: column;
+                    background-color: themed("bg");
+                    height: 400px;
+                    padding: 20px 15px;
+                    -webkit-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+                    -moz-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+                    box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+
+                    .item {
+                         display: flex;
+                         justify-content: space-between;
+                         align-items: center;
+                         padding: 10px 10px;
+
+                         .left {
+                              display: flex;
+                              gap: 5px;
+                              align-items: center;
+
+                              span {
+                                   font-size: inherit;
+                              }
+                         }
+                    }
+               }
+
+
+               .onlineFriends {
+                    display: flex;
+                    flex-direction: column;
+                    height: 550px;
+                    background-color: themed("bg");
+                    -webkit-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+                    -moz-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+                    box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+                    padding: 20px 10px;
+                    gap: 20px;
+
+                    .onlineStatus {
+                         display: flex;
+                         gap: 20px;
+                         align-items: center;
+                         position: relative;
+
+                         .dotOnline {
+                              width: 10px;
+                              height: 10px;
+                              border-radius: 50%;
+                              background-color: rgb(7, 240, 7);
+                              position: absolute;
+                              top: 0px;
+                              left: 20px;
+                         }
+
+                    }
+               }
+          }
+     }
+}

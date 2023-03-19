@@ -1,0 +1,83 @@
+@import "../../style.scss";
+
+.post {
+     padding: 20px;
+     ;
+
+     @include themify($themes) {
+          .container {
+               display: flex;
+               flex-direction: column;
+               gap: 10px;
+               padding: 10px;
+               height: auto;
+               background-color: themed('bg');
+               border-radius: 20px;
+
+               .infoUser {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .left {
+                         display: flex;
+                         align-items: center;
+                         gap: 25px;
+
+                         .statutInfo {
+                              p {
+                                   color: themed("textColor");
+                                   font-size: 14px;
+                              }
+
+                              span {
+                                   color: themed("textColorSoft");
+                                   font-size: 12px;
+                              }
+                         }
+
+                         img {
+                              width: 30px;
+                              height: 30px;
+                              border-radius: 50%;
+                         }
+                    }
+
+                    .right {
+                         display: flex;
+                         align-items: center;
+                    }
+               }
+
+               .userPost {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 20px 0px;
+                    gap: 20px;
+
+                    p {
+                         color: themed("textColor");
+                    }
+
+                    img {
+                         width: 100%;
+                         max-height: 400px;
+                         object-fit: cover;
+
+                    }
+               }
+
+               .interraction {
+                    display: flex;
+                    gap: 20px;
+
+                    .item {
+                         display: flex;
+                         align-items: center;
+                         gap: 15px;
+                         cursor: pointer;
+
+                    }
+               }
+          }
+     }
+}

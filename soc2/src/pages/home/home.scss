@@ -1,0 +1,18 @@
+@import "../../style.scss" ;
+
+.home {
+     @include themify($themes) {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          
+          background-color: themed("bgSoft");
+          padding: 20px;
+          color: themed("textColor");
+          min-height: 100VH;
+          @include mobile{
+               padding:0 ;
+          }
+     }
+
+}

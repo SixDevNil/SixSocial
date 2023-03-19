@@ -1,0 +1,72 @@
+@import "../../style.scss";
+
+.comments {
+
+     @include themify($themes) {
+          background-color: themed("bgSoft");
+          padding: 15px;
+          border-radius: 10px;
+          .userPdp {
+               width: 40px;
+               height: 40px;
+               border-radius: 50%;
+               object-fit: cover;
+          }
+
+          .currentUserComment {
+               display: flex;
+               align-items: center;
+               gap: 15px;
+
+               .commentaire {
+                    flex: 2;
+                    height: 30px;
+                    border-radius: 20px;
+                    padding: 0px 15px;
+                    border : 1px solid themed("border") ;
+                    outline: none;
+                    background: themed("bg");
+                    color : themed("textColorSoft")
+               }
+
+               button {
+                    border: none;
+                    color: white;
+                    height: 30px;
+                    width: 60px;
+                    cursor: pointer;
+                    background-color: #5271ff;
+               }
+          }
+
+          .comment {
+               display: flex;
+               gap: 15px;
+               align-items: flex-start;
+               padding: 20px 0px;
+
+               .comms {
+                    display: flex;
+                    flex: 2;
+                    flex-direction: column;
+
+                    .username {
+                         color: themed("textColor");
+                         font-size: 14px;
+                         font-weight: bold;
+                    }
+
+                    p {
+                         color: themed("textColorSoft");
+                         font-size: 13px;
+                    }
+               }
+
+               .time {
+                    color: themed("textColorSoft");
+                    font-size: 12px;
+                    align-self: center;
+               }
+          }
+     }
+}

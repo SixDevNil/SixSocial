@@ -1,0 +1,75 @@
+@import "../../style.scss";
+
+.share {
+     @include themify($themes) {
+          padding: 20px;
+          justify-self: center;
+          color : themed("textColor") ;
+          .container {
+               height: 100px;
+
+               display: flex;
+               flex-direction: column;
+               border-radius: 30px;
+               background-color: themed("bg");
+               padding: 20px;
+
+               .commentaire {
+                    display: flex;
+                    align-items: center;
+                    padding: 20px 10px;
+                    gap: 20px;
+                    border-bottom: 1px solid themed("border");
+
+                    img {
+                         width: 30px;
+                         height: 30px;
+                         border-radius: 50%;
+                    }
+
+                    input {
+                         border: none;
+                         outline: none;
+                         width: 100%;
+                         background-color: transparent;
+                         color : themed("textColor") ;
+                    }
+               }
+
+               .fonctionnalité {
+                    display: flex;
+                    gap: 10px;
+                    justify-content: space-between;
+                    padding: 10px 10px;
+
+                    .left {
+                         display: flex;
+                         gap: 15px;
+                         color : themed("textColorSoft") ;
+                         .item {
+                              display: flex;
+                              align-items: center;
+                              gap: 5px;
+                              font-size: 12px;
+                         }
+                    }
+
+                    .right {
+                         display: flex;
+                         align-items: center;
+
+                         button {
+                              border: none;
+                              color: white;
+                              height: 30px;
+                              width: 60px;
+                              cursor: pointer;
+                              background-color: #5271ff;
+                         }
+                    }
+
+               }
+          }
+     }
+
+}

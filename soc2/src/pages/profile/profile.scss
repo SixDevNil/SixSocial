@@ -1,0 +1,13 @@
+@import"../../style.scss";
+
+.profile {
+     @include themify($themes) {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          background-color: themed("bgSoft");
+          color: themed("textColor");
+          padding: 20px;
+
+     }   
+}

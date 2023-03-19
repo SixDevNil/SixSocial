@@ -1,0 +1,74 @@
+.register{
+     display : flex ;
+     height : 100vh ;
+     justify-content: center;
+     align-items: center;
+     background-color: rgb(193, 190, 255);
+     .card{
+          display : flex ;
+          background-color: #fff;
+          min-height: 600px;          
+          border-radius: 10px;
+          width : 50% ;
+          overflow: hidden;
+          .left{
+               display : flex ;
+               flex : 1 ;
+               flex-direction: column;
+               padding: 40px;
+               h1{
+                    font-size: 30px;
+                    color: gray;
+               }
+               form{
+                    display : flex ;
+                    flex-direction: column;
+                    gap : 30px ;
+
+                    input{
+                         border : none ;
+                         border-bottom: 1px Solid whitesmoke;
+                         padding : 20px 10px ;
+                    }
+                    button{
+                         width : 50% ;
+                         height : 40px ;
+                         border : none ;
+                         cursor: pointer;
+                    }
+               }
+          }
+          .right{
+               flex: 1;
+               padding: 50px;
+               background-image: linear-gradient(rgba(39, 11, 96, 0.5), rgba(39, 11, 96, 0.5)), url(../../../public/images/sary.jpg);
+               background-size: cover;
+               display: flex;
+               flex-direction: column;
+               gap: 30px;
+               color: white;
+
+
+               h1 {
+                    font-size: 100px;
+                    line-height: 100px;
+               }
+
+               p {
+                    font-size: 20px;
+               }
+
+               span {
+                    font-size: 20px;
+               }
+
+               button {
+                    width: 50%;
+                    height: 40px;
+                    color: rgb(128, 6, 109);
+                    cursor: pointer;
+                    border: none;
+               }
+          }
+     }
+}
