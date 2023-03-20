@@ -11,7 +11,7 @@ const Register = () => {
   };
 
   const handleClick = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
     try {
       await axios.post("http://localhost:8800/api/auth/register", infoUser);
     } catch (err) {
@@ -56,11 +56,10 @@ const Register = () => {
         <div className="right">
           <h1>LAMA SOCIAL.</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero cum,
-            alias totam numquam ipsa exercitationem dignissimos, error nam,
-            consequatur.
+            Tongasoa eto amin'ny tambazora sosialy Six Blog, ahafahana
+            mifanerasera @ ireo namanao
           </p>
-          <span>Do you have an account ? </span>
+          <span>Commencez ici . . . </span>
           <Link to="/login">
             <button>Login</button>
           </Link>
